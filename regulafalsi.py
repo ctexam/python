@@ -11,7 +11,7 @@ while True:
 	elif abs(f(x))<0.0001:
 		print('The root is:',x)
 		break
-	elif f(a)* f(b) < 0:
+	elif f(x) < 0:
 		b = x
 	else:
 		a = x
