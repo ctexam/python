@@ -1,26 +1,22 @@
 from numpy import*
-a=int(input("size of matrix="))
-u=zeros((a,2*a),float)
-for p in range(a):
-    u[p][p+a]=1
-    for l in range(a):
-        b=float(input("enter values="))
-        u[p][l]=b
-u=array(u,float)
+n=int(input("size of matrix=")) #n is the size of the matrix
+u=zeros((n,2*n),float)  # u is the augmented matrix
+for p in range(n): # p is the row number
+    u[p][p+n]=1 # make the identity matrix in the right half
+    for l in range(n): # l is the column number
+        b=float(input("enter values="))  #input value in order
+        u[p][l]=b    #assign the value to the matrix
+
 #print("orginal matrix",u[:,:a])
 print("orginal matrix",u)
 
-for i in range(a):
-    j=0
+for i in range(n):
     while u[i][i]==0:
-        j=j+1
-        u[[i,j]]=u[[j,i]]
-        if j==a-1 :
-            break
+        u[[i,i+1]]=u[[i+1,i]]
         print(u)
     u[i] = u[i]/u[i,i]
-    for j in range(a):
+    for j in range(n):
         if j != i:
             u[j]=u[j]-u[j,i]*u[i]
-print("inverse of matrix is=",round(u[:, a:],3))
+print("inverse of matrix is=",round(u[:, n:],3))
 
