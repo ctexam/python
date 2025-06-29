@@ -12,7 +12,7 @@ while True:
 		print('The root is:',x)
 		break
 	elif f(a)* f(b) < 0:
-            b = x
+		b = x
 	else:
 		a = x
 print("value of f(x) is:",f(x))
