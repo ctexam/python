@@ -4,7 +4,7 @@ u=zeros((a,2*a),float)
 for p in range(a):
     u[p][p+a]=1
     for l in range(a):
-        b=int(input("enter values="))
+        b=float(input("enter values="))
         u[p][l]=b
 u=array(u,float)
 #print("orginal matrix",u[:,:a])
