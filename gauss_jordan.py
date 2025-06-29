@@ -11,10 +11,10 @@ for p in range(n): # p is the row number
 print("orginal matrix",u)
 
 for i in range(n):
-    while u[i][i]==0:
-        u[[i,i+1]]=u[[i+1,i]]
-        print(u)
-    u[i] = u[i]/u[i,i]
+    while u[i][i]==0:  # if the diagonal element is zero
+        u[[i,i+1]]=u[[i+1,i]] # swap the row with the next row
+        print(u) # print the matrix after swapping
+    u[i] = u[i]/u[i,i] 
     for j in range(n):
         if j != i:
             u[j]=u[j]-u[j,i]*u[i]
