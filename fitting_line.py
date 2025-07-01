@@ -8,8 +8,6 @@ print("Sum YX:", sum_yx)
 invmat=(linalg.inv(sum_matrix))
 
 ans=dot(invmat,sum_yx)
-print(ans)
-po=len(ans)
 xc =linspace(1, 8, 256)
 
 coefficents= ans.flatten()
