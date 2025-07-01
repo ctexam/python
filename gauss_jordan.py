@@ -8,7 +8,7 @@ for p in range(n): # p is the row number
         u[p][l]=b    #assign the value to the matrix
 
 #print("orginal matrix",u[:,:a])
-print("orginal matrix",u)
+print("augmented matrix is ",u)   # print the augmented matrix
 
 for i in range(n):
     while u[i][i]==0:  # if the diagonal element is zero
