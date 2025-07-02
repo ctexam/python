@@ -7,7 +7,7 @@ for p in range(n): # p is the row number
         b=float(input("enter values="))  #input value in order
         u[p][l]=b    #assign the value to the matrix
 
-#print("orginal matrix",u[:,:a])
+#print("orginal matrix",u[:,:n])
 print("augmented matrix is ",u)   # print the augmented matrix
 
 for i in range(n):
@@ -18,5 +18,5 @@ for i in range(n):
     for j in range(n):
         if j != i:
             u[j]=u[j]-u[j,i]*u[i]
-print("inverse of matrix is=",round(u[:, n:],3))
+print("inverse of matrix is=",round(u[:, n:],2))
 

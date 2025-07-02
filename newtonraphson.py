@@ -4,10 +4,9 @@ def df(x):
     return 4*x-3
 def sol(x):
     while True:
-        h=f(x)/df(x)
-        if abs(h)<1.0e-9:
+        h=-f(x)/df(x)
+        if abs(h)<1.0e-4:
             break
-        x=x-h
+        x=x+h
     return print(x)
-sol(4)
-sol(0)
+sol(2)

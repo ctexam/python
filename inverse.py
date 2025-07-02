@@ -12,6 +12,7 @@ def determinant(a):
         det+=a[0][i]*(-1)**i*determinant(b)
     return(det)
 
+
 def inv(f):
     y=determinant(f)
     k=len(f)
@@ -23,3 +24,5 @@ def inv(f):
             t[i][j]=(((-1)**(i+j))*determinant(b))
     s=t/y
     return(s)
+m=[[2,4,6,16],[2,12,4,6],[1,10,5,8],[1,3,2,8]]
+print(inv(m))
