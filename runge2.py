@@ -17,7 +17,7 @@ def runge_kutta_2nd_order(x0, y0, x_end, h):
         x = x + h
         x_values.append(x)
         y_values.append(y)
-        print("x=", x, "y=", y)
+    print("x=", x, "y=", y)
     
     # Plotting the results
     plt.plot(x_values, y_values, 'o-', label='RK2 Approximation')

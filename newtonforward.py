@@ -2,7 +2,7 @@ from pylab import*
 from math import*
 x_val=[1891,1901,1911,1921,1931]
 y_val=[46,66,81,93,101]
-n=5
+n=len(x_val)
 
 print(x_val);print(y_val)
 diff=[[0]*i for i in range(n-1,0,-1)]
