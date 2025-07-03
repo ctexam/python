@@ -1,0 +1,24 @@
+from pylab import *
+x = array([1, 2, 4, 7])
+y = array([3, 6, 12, 21])
+at = arange(min(x),max(x), 0.1)
+def Lagrange(X):
+total = 0
+n = len(x)
+for i in range(n):
+li = 1
+for j in range(n):
+if i != j:
+li *= (X - x[j]) /
+(x[i] - x[j])
+total += li * y[i]
+return total
+print('f(10)=',Lagrange(10))
+Y = Lagrange(at)
+plot(at, Y, label='Lagrange')
+plot(x, y, 'o', label='Data Points')
+xlabel('x')
+ylabel('y')
+grid(True)
+legend()
+show()
